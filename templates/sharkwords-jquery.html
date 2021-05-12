@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/styles.css">
+
+<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+{% endblock head %}
+
+{% block body %}
+<p id="info">
+  The code for this demo is located at
+  <cite>static/js/sharkwords-jquery.js</cite>
+</p>
+
+<section id="shark-img">
+  <img src="/static/images/guess0.png">
+</section>
+
+<a id="play-again" style="display: none;">
+  The shark got you! Click here to play again.
+</a>
+
+<section id="word-container"></section>
+
+<section id="letter-buttons"></section>
+
+<script src="/static/js/sharkwords.js"></script>
+{% endblock %}

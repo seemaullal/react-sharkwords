@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="/static/lib/babel-standalone.js"></script>
+  <script src="/static/lib/react.development.js"></script>
+  <script src="/static/lib/react-dom.development.js"></script>
+{% endblock head %}
+
+{% block body %}
+  <h3>This is the Sharkwords application we will be building.</h3>
+  <div id="root">
+    React component should be here.
+  </div>
+
+  <script src="/static/js/sharkwords.jsx" type="text/jsx"></script>
+{% endblock %}
