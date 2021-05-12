@@ -54,9 +54,6 @@ function Letters(props) {
 
 function Sharkwords(props) {
   const guessLetter = (letter) => {
-    if (!props.word.includes(letter)) { // wrong guess
-      setNumWrong(numWrong + 1);
-    }
     // prevLetters is the current state value of guessed letters
     // when this function is called
     setGuessedLetters(prevLetters => [...prevLetters, letter]);
@@ -64,12 +61,13 @@ function Sharkwords(props) {
 
   const { word } = props // const word = props.word
   // uses React to add a state value that we call numWrong and a function to update
-  const [ numWrong, setNumWrong ] = React.useState(0);
+
   // since both Word and Letters need the guessedLetters, we put this
   // in the parent component (which is this Sharkwords component)
   // and then will pass that value to the Word and Letters components
   const [ guessedLetters, setGuessedLetters ] = React.useState([]);
 
+  const numWrong = guessedLetters.filter(letter => !word.includes(letter)).length
   return (
     <div>
       <img src={`static/images/guess${numWrong}.png`} />
