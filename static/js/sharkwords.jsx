@@ -11,7 +11,7 @@ function Word(props) {
   // otherwise just show an empty slot
   const { word, guessedLetters} = props
   const wordDivs = []
-  const counter = 1;
+  let counter = 1;
   for (const letter of word) {
     wordDivs.push(
       <div key={counter} className="letter-box">
