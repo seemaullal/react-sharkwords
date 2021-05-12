@@ -7,7 +7,6 @@ const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 // image to show based on the number of wrong guesses
 
 function Word(props) {
-  console.log('rendering Word')
   // if they have guessed the letter print it on the page
   // otherwise just show an empty slot
   const { word, guessedLetters} = props
@@ -33,7 +32,6 @@ function Word(props) {
 // when someone clicks a letter button
 // add that letter to my guessedLetters state
 function Letters(props) {
-  console.log('rendering Letters')
   const { guessedLetters, guessLetter} = props
   const letterButtons = []
   for (const letter of LETTERS) {
@@ -55,7 +53,6 @@ function Letters(props) {
 }
 
 function Sharkwords(props) {
-  console.log('rendering Sharkword')
   const guessLetter = (letter) => {
     if (!props.word.includes(letter)) { // wrong guess
       setNumWrong(numWrong + 1);
